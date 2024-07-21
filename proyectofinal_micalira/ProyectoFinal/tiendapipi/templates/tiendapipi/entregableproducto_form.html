@@ -1,0 +1,19 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">Formulario EntregableProducto</h1>    
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="🧉Agregar🧉">
+</form>
+
+{% endblock contenido %}

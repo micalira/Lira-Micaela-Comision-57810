@@ -1,0 +1,38 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">EntregableProducto</h1>    
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Provincia</th>
+            <th>EmpresaEnvio</th>
+            <th>FechaEntrega</th>
+            <th>Entregado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for e in entregableProducto %}
+        </tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.provincia }}</td>
+            <td>{{ e.empresaenvio }}</td>
+            <td>{{ e.fechaEntrega }}</td>
+            <td>{{ e.entregado }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}

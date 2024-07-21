@@ -1,0 +1,21 @@
+|{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">Edita tu perfil en Nuesta Tienda Pipi</h1>    
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}        
+    </table>
+    <input type="submit" value="Editar Perfil">
+</form>
+
+ 
+{% endblock contenido %}

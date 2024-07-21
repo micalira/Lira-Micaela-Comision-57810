@@ -1,0 +1,37 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">TiendaMayorista</h1>    
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Dni</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for c in tiendaMayorista %}
+        </tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.apellido }}</td>
+            <td>{{ p.telefono }}</td>
+            <td>{{ p.dni }}</td>
+            <td>{{ p.email }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}

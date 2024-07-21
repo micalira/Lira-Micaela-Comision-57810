@@ -1,0 +1,36 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">ProductosMinorista</h1>    
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Cantidad</th>
+            <th>Peso</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for c in ProductosMinorista %}
+        </tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.valor }}</td>
+            <td>{{ p.cantidad }}</td>
+            <td>{{ p.peso }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}

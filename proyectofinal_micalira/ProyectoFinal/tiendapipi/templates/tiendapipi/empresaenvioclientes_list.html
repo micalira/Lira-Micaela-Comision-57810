@@ -1,0 +1,64 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">Empresaenvioclientes</p></h4>     
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h2>Empresaenvioclientes</h2></td>
+        <td>
+            <a
+            href="{%  url 'empresaEnvioClientesCreate' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Email</th>
+            <th>CostoEnvio</th>
+            <th>DemoraEnvio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for e in empresaenvioclientes_list %}
+        </tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.pagina }}</td>
+            <td>{{ e.email }}</td>
+            <td>{{ e.costoenvio}}</td>
+            <td>{{ e.demoraenvio}}</td>
+            <td>
+                <a
+                  href="{%  url 'empresaEnvioClientesUpdate' e.id %}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{%  url 'empresaEnvioClientesDelete' e.id %}"
+                  class="btn btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>                
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}

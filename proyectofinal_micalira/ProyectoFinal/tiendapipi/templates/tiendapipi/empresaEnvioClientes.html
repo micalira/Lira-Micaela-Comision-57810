@@ -1,0 +1,36 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">EmpresaEnvioClientes</h1>    
+{% endblock titulo %}
+    
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Pagina</th>
+            <th>Email</th>
+            <th>CostoEnvio</th>
+            <th>DemoraEnvio</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for c in empresaEnvioClientes %}
+        </tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.pagina }}</td>
+            <td>{{ c.costoenvio }}</td>
+            <td>{{ c.demoraenvio }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}

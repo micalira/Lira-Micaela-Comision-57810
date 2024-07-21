@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load  static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>🧉 Tienda de Termos - Tienda Pipi 🧉 </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/logotiendapipi.jpg' %}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <!-- Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        {% block titulo %}
+        <h2 class ="mb-2 text-center"><p style="color:purple">Bienvenidos a TiendaPipi </h2>
+        {% endblock titulo %}
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home'  %}">Inicio</a>
+            {% if user.is_authenticated %}
+                <a class="navbar-brand" href="{% url 'acerca'  %}">Acerca de Mica</a>
+                <a class="navbar-brand" href="{% url 'tiendaMinorista'  %}">TiendaMinorista</a>
+                <a class="navbar-brand" href="{% url 'tiendaMayorista'  %}">TiendaMayorista</a>
+                <a class="navbar-brand" href="{% url 'productosMinorista'  %}">ProductosMinorista</a>
+                <a class="navbar-brand" href="{% url 'productosMayorista'  %}">ProductosMayorista</a>
+                <a class="navbar-brand" href="{% url 'proveedorMercaderia'  %}">ProveedorMercaderia</a>
+                <a class="navbar-brand" href="{% url 'empresaEnvioClientes'  %}">EmpresaEnvioClientes</a>
+                <a class="navbar-brand" href="{% url 'entregableProducto'  %}">EntregableProducto</a>
+                <a class="btn btn-success" href="#Carrito de compras 🧉">Carrito de compras 🧉</a>
+                <p style="color:green"> [{{user.first_name}}{{user.last_name}}]</p>
+                <div class="text-center">
+                    <a href="{% url 'agregar_avatar' %}"><img src="{{ request.session.avatar }}" height="40px" weight="40px" alt="mi foto"></a>
+                </div>
+                <a class="btn btn-success" href="{% url 'perfil' %}">Perfil</a>
+                <a class="btn btn-primary" href="{% url 'logout' %}">Salir</a>
+            {% else %}
+                <a class="btn btn-primary" href="{% url 'login' %}">Ingreso</a>
+                <a class="btn btn-success" href="{% url 'registro' %}">Registrate</a>
+            {% endif %}
+            </div>
+
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">🧉 Tienda de Termos 🧉</h1>
+                    <p class="lead fw-normal text-white-50 mb-0"> 🧉 No es solo un termo, es un compañero de vida 🧉</p>
+                </div>
+            </div>
+        </header>
+
+        {% block contenido %}
+
+        {% endblock contenido %}
+
+        <!-- Product image-->
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">   
+                            <!-- Product image-->
+                            <img src = "{% static '/assets/vacuum.jpg' %}" alt="" scrset="">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><p style="color:green">Termo Media Manija</h5>
+                                    <!-- Product price-->
+                                    <p style="color:green">Variedad en marcas premium
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"><p style="color:green">Ver productos</a></div>
+                            </div>
+                        </div>                                              
+      
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">PROMO</div>
+                            <!-- Product image-->
+                            <img src = "{% static '/assets/termomediamanijacolor.jpeg' %}" alt="" scrset="">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><p style="color:green">Termo Media Manija Colores</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <p style="color:green">Variedad en colores
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">PROMO</div>
+                            <!-- Product image-->
+                            <img src = "{% static '/assets/termo1.2.jpg' %}" alt="" scrset="">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><p style="color:green">Termos 1.2 Litros</h5>
+                                    <!-- Product price-->
+                                    <p style="color:green">Variedad en colores
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img src = "{% static '/assets/termo1.3.jpg' %}" alt="" scrset="">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><p style="color:green">Termos 1.3 Litros</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <p style="color:green">Variedad en colores
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                    <ul class="list-inline mb-2">
+                    <li class="list-inline-item"><a href="#!"><p style="color:green">Acerca de Nosotros</a></li>
+                    <li class="list-inline-item"><a href="#!"><p style="color:green">Contacto</a></li>
+                    <li class="list-inline-item"><a href="#!"><p style="color:green">Terminos y condiciones</a></li>
+                    <li class="list-inline-item"><a href="#!"><p style="color:green">Politica de privacidad</a></li>
+                    </ul>
+                <p class="m-0 text-center text-white">Copyright &copy; TiendaPipi de Mica Lira Website 2024. All rights reserverd.</p></div>
+                <img src = "{% static '/assets/banertiendapipi.jpg' %}" alt="" scrset="">
+            </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>

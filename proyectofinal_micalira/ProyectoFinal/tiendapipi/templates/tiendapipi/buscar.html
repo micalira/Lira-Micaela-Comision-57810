@@ -1,0 +1,19 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">Buscar TiendaMinorista</h1>    
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<form action="{% url 'encontrarTiendaMinorista' %}" method="get">
+    {% csrf_token %}
+    <table>
+        <p>Ingrese el patron de busqueda<input type="text" name="buscar" id="buscar"></p>
+    </table>
+    <input type="submit" value="Buscar🧉">
+</form>
+
+{% endblock contenido %}

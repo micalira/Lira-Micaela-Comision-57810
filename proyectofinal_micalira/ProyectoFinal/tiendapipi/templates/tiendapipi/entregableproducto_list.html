@@ -1,0 +1,64 @@
+{% extends 'tiendapipi/index.html' %}
+
+
+{% block titulo %}
+<h4 class="mb-2 text-center"><p style="color:green">EntregableProducto</p></h4>    
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h2>EntregableProducto</h2></td>
+        <td>
+            <a
+            href="{%  url 'entregableProductoCreate' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Provincia</th>
+            <th>EmpresaEnvio</th>
+            <th>FechaEntrega</th>
+            <th>Entregado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody> 
+    {% for e in entregableproducto_list %}
+        </tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.provincia }}</td>
+            <td>{{ e.empresaenvio }}</td>
+            <td>{{ e.fechaentrega }}</td>
+            <td>{{ e.entregado }}</td>
+            <td>
+                <a
+                  href="{%  url 'entregableProductoUpdate' e.id %}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{%  url 'entregableProductoDelete' e.id %}"
+                  class="btn btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>                
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+ 
+{% endblock contenido %}
