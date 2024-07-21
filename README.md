@@ -1,7 +1,7 @@
 # Lira-Micaela-Comision-57810
 Comision Python Coderhouse Comision-57810
 
-Mi proyecto esta pensando en un emprendimiento chico a mediano, los cuales necesitan poder estar ordenados y contar con toda la informacion completa y ordenada. Sin bien me faltan muchas cosas, no tuve tiempo para aprenderlas para poder agregarlas, fuera del curso. Espero haber aportado todo lo que vimos en clase, di mi mejor esfuerzo.
+Mi proyecto esta pensando en un emprendimiento chico a mediano, los cuales necesitan poder estar ordenados y contar con toda la informacion completa y ordenada. Sin bien me faltan muchas cosas, no tuve tiempo para aprenderlas para poder agregarlas, fuera del curso. Espero haber aportado todo lo que vimos en clase, di mi mejor esfuerzo dentro de todo el cansancio mental que llevo.
 
 En esta app, la idea seria que quienes sean minoristas solo vean informacion de productos minoristas, al igual que para clientes mayoristas y que los socios y empleados del empredimiento tengan acceso a todos los demas. 
 
