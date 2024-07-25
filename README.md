@@ -12,6 +12,12 @@ https://1drv.ms/v/c/882cbda7abb5e28d/ETJ2g2SVvvNGg5eowq7kNB4BqAJu9sPWrPs-rGRCy6t
 
 Quiero agradecerles a todo el equipo de docentes, por lo brindado en cada curso y por siempre estas a disposicion. Me llevo muchisimas cosas hermosas de este curso, y por sobre todo saber que puedo, que esto es lo mio, que lo entiendo y me sale bien. Ahora voy a decirme con mucho entusiasmo a mi carrera, que obvio, tiene programacion. 
 
+Usuario: MicaLira
+Contraseña: Tiendapipi876886
+
+Usuario: Invitados
+Contraseña: TiendaPipiInvitado
+
 GRACIAS! 
 
 Quedo a disposicion, 
